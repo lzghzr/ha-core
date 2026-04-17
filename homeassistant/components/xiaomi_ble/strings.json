@@ -15,6 +15,9 @@
       "expected_32_characters": "Expected a 32 character hexadecimal bindkey."
     },
     "flow_title": "{name}",
+    "progress": {
+      "wait_for_authorization": "Please click the link below or scan the QR code to authenticate:\n[{login_url}]({login_url})\n![login_qrcode]({image_url})\n"
+    },
     "step": {
       "bluetooth_confirm": {
         "description": "[%key:component::bluetooth::config::step::bluetooth_confirm::description%]"
@@ -38,8 +41,9 @@
       "get_encryption_key_4_5_choose_method": {
         "description": "A Mi device can be set up in Home Assistant in two different ways.\n\nYou can enter the bindkey yourself, or Home Assistant can import them from your Mi account.",
         "menu_options": {
-          "cloud_auth": "Mi account (recommended)",
-          "get_encryption_key_4_5": "Enter encryption key manually"
+          "cloud_auth": "Mi account",
+          "get_encryption_key_4_5": "Enter encryption key manually",
+          "qrcode_cloud_auth": "Quick login (recommended)"
         }
       },
       "get_encryption_key_legacy": {
@@ -47,6 +51,9 @@
           "bindkey": "Bindkey"
         },
         "description": "The sensor data broadcast by the sensor is encrypted. In order to decrypt it we need a 24 character hexadecimal bindkey."
+      },
+      "qrcode_connection_failed": {
+        "description": "Error while communicating with Mi API. Please try again."
       },
       "user": {
         "data": {
